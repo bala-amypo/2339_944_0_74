@@ -1,11 +1,12 @@
 package com.example.demo.newentity;
-import jakarta.presistence.*;
-import jakarta.Validation.constraints.*;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
+
 public class StudentValidation{
-    @Id
+    @Entity
     @Table(name="Student")
-    @GeneratedValue(stargery=GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @NotBlank(message="No permission for outing")
     private string name;
     @NotBlank(message="Should not contain space")
