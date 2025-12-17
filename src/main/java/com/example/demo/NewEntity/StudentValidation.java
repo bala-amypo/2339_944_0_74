@@ -10,5 +10,19 @@ public class StudentValidation{
     @NotBlank(message="Should not contain space")
     @Email(message="Invalid fromat")
     private string email;
-    public StudentValidation(Long id,@)
+    public StudentValidation(Long id,@NotBlank(message="No permission for outing")string name,
+            @NotBlank(message="Should not contain space") @Email(message="Invalid fromat")String email){
+        this.id=id;
+        this.name=name;
+        this.email=email;
+    }
+    public StudentValidation(){
+    }
+    public Long getId(){
+        return id;
+    }
+    public void setId(Long id){
+        return id;
+    }
+    public 
 }
