@@ -1,41 +1,56 @@
 package com.example.demo.newentity;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
-public class StudentValidation{
-    @Entity
-    @Table(name="Student")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Entity
+@Table(name = "student")
+public class StudentValidation {
 
-    @NotBlank(message="No permission for outing")
-    private string name;
-    @NotBlank(message="Should not contain space")
-    @Email(message="Invalid fromat")
-    private string email;
-    public StudentValidation(Long id,@NotBlank(message="No permission for outing")string name,
-            @NotBlank(message="Should not contain space") @Email(message="Invalid fromat")String email){
-        this.id=id;
-        this.name=name;
-        this.email=email;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "Name cannot be blank")
+    private String name;
+
+    @NotBlank(message = "Email should not be blank")
+    @Email(message = "Invalid format")
+    private String email;
+
+    // No-argument constructor (required by JPA)
+    public StudentValidation() {
     }
-    public StudentValidation(){
+
+    // Parameterized constructor
+    public StudentValidation(Long id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
     }
-    public Long getId(){
+
+    // Getters and Setters
+    public Long getId() {
         return id;
     }
-    public void setId(Long id){
-        return id;
+
+    public void setId(Long id) {
+        this.id = id;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public void setName(String name){
-        return name;
+
+    public void setName(String name) {
+        this.name = name;
     }
-    public Long getEmail(){
-        return Email;
-    }
-    public void setEmail(String id){
+
+    public String getEmail() {
         return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
