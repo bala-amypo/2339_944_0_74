@@ -3,6 +3,7 @@ import jakarta.presistence.*;
 import jakarta.Validation.constraints.*;
 public class StudentValidation{
     @Id
+    @Table(name="Student")
     @GeneratedValue(stargery=GenerationType.IDENTITY)
     private long id;
     @NotBlank(message="No permission for outing")
@@ -24,5 +25,16 @@ public class StudentValidation{
     public void setId(Long id){
         return id;
     }
-    public 
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        return name;
+    }
+    public Long getEmail(){
+        return Email;
+    }
+    public void setEmail(String id){
+        return email;
+    }
 }
