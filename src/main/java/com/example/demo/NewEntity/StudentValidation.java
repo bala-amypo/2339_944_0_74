@@ -18,18 +18,14 @@ public class StudentValidation {
     @Email(message = "Invalid format")
     private String email;
 
-    // No-argument constructor (required by JPA)
     public StudentValidation() {
     }
 
-    // Parameterized constructor
     public StudentValidation(Long id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
     }
-
-    // Getters and Setters
     public Long getId() {
         return id;
     }
