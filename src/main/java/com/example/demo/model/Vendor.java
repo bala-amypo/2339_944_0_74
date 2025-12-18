@@ -31,7 +31,7 @@ public class Vendor{
         return vendorName;
     }
     public void setVendorName(String VendorName){
-        this.VendorName=VendorName;
+        this.vendorName=vendorName;
     }
     public String getContactEmail(){
         return vendorName;
