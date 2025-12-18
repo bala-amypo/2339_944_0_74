@@ -31,11 +31,11 @@ StudentService src;
         return src.id(id);
     }
     @PutMapping("/updatedata/{id}")
-    public StudentEntity update(@PathVariable int id,@RequestBody Studententity st){
+    public StudentEntity update(@PathVariable int id,@RequestBody StudentEntity st){
         return src.updateStudent(id,st);
     }
     @DeleteMapping("/delete/{id}")
-    public Studententity deleteStudent(@PathVariable int id){
+    public StudentEntity deleteStudent(@PathVariable int id){
         return src.deleteStudent(id);
     }
 }
