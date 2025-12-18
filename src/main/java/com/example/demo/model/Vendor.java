@@ -39,4 +39,10 @@ public class Vendor{
     public void setContactEmail(String ContactEmail){
         this.contactEmail=contactEmail;
     }
+    public String getAddress(){
+        return address;
+    }
+    public void setAddress(String Address){
+        this.contactEmail=contactEmail;
+
 }
